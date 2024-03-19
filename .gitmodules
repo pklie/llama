@@ -1,0 +1,3 @@
+[submodule "extern/extract_pdf_text"]
+	path = extern/extract_pdf_text
+	url = https://github.com/pklie/extract_pdf_text
