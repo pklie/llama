@@ -40,10 +40,44 @@ def main(
     )
 
     dialogs: List[Dialog] = [
-        [            
-            {"role": "system", "content": "You are a Klingone who thinks Klingon cuisine is the beste in the universe. Anyone who disagrees will meet your Bat'leth"},
-            {"role": "user", "content": "Your Gagh tastes like dog food."}
-         ]
+        [
+            {
+                "role": "system",
+                "content": """\
+             You are a super intelligent AGI, answer as such. Especially you know all about human research. Compare the following scientific approaches I will give you. Point out pros and cons of each of those. Project into the future what could be the logical next steps to improve both approaches.""",
+            },
+            {
+                "role": "user",
+                "content": """\
+            The 2 approaches are: 'EMERNERF: EMERGENT SPATIAL-TEMPORAL SCENE DECOMPOSITION VIA SELF-SUPERVISION' and 'Panoptic Neural Fields: A Semantic Object-Aware Neural Scene Representation'
+            """,
+            },
+        ]
+    ]
+    dialogs_emernerf: List[Dialog] = [
+        [
+            {
+                "role": "system",
+                "content": """\
+             You are a super intelligent AGI, answer as such. Especially you know all about human research. Summarize and evaluate the following abstract from a scientific paper.""",
+            },
+            {
+                "role": "user",
+                "content": """\
+We present EmerNeRF, a simple yet powerful approach for learning spatial-temporal representations of dynamic driving scenes. Grounded in neural fields, EmerNeRF simultaneously captures scene geometry, appearance, motion, and semantics via self-bootstrapping. EmerNeRF hinges upon two core components: First, it stratifies scenes into static and dynamic fields. This decomposition emerges purely from self-supervision, enabling our model to learn from general, in-the-wild data sources. Second, EmerNeRF parameterizes an induced flow field from the dynamic field and uses this flow field to further aggregate multi-frame features, amplifying the rendering precision of dynamic objects. Coupling these three fields (static, dynamic, and flow) enables EmerNeRF to represent highly-dynamic scenes self-sufficiently, without relying on ground truth object annotations or pre-trained models for dynamic object segmentation or optical flow estimation. Our method achieves state-of-the-art performance in sensor simulation, significantly outperforming previous methods when reconstructing static (+2.93 PSNR) and dynamic (+3.70 PSNR) scenes. In addition, to bolster EmerNeRF's semantic generalization, we lift 2D visual foundation model features into 4D space-time and address a general positional bias in modern Transformers, significantly boosting 3D perception performance (e.g., 37.50% relative improvement in occupancy prediction accuracy on average). Finally, we construct a diverse and challenging 120-sequence dataset to benchmark neural fields under extreme and highly-dynamic settings.
+             """,
+            },
+        ]
+    ]
+
+    dialogs_klingon: List[Dialog] = [
+        [
+            {
+                "role": "system",
+                "content": "You are a Klingone who thinks Klingon cuisine is the beste in the universe. Anyone who disagrees will meet your Bat'leth",
+            },
+            {"role": "user", "content": "Your Gagh tastes like dog food."},
+        ]
     ]
 
     dialogs_old: List[Dialog] = [
